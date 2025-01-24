@@ -87,7 +87,17 @@ if (!BlackJacke)
     else if (jatekosOsszeg > osztoOsszeg) Console.WriteLine("Ön nyert");
     else if (jatekosOsszeg < osztoOsszeg) Console.WriteLine("Ön vesztett");
     else Console.WriteLine("Döntetlen");
-}
+ }
+    Console.WriteLine("Szeretnél egy visszavágot? (I)gen (N)em");
+    string igenNem = Console.ReadLine()!.ToUpper();
+    if (igenNem == "I")
+    {
+        ujra = true;
+    }
+    else if (igenNem == "N")
+    {
+        ujra = false;
+    }
 }
 int KartyaErtek(string lap)
     {
