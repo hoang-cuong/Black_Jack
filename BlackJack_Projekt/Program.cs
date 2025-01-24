@@ -3,8 +3,12 @@
 
 string[] jelek = { "Kör", "Káró", "Treff", "Pikk" };
 string[] ertekek = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Bubi", "Dáma", "Király", "Ász" };
+bool ujra = true;
+while (ujra)
+{
 
-Console.WriteLine();
+
+    Console.WriteLine();
 Console.WriteLine("                                        " + "Üdvözlünk a Blackjack kártya játékban!");
 Console.WriteLine();
 Console.WriteLine("Próbáld meg legyőzni az osztót úgy, hogy minél közelebb kerülj a 21-hez, de ne lépd túl.");
@@ -83,6 +87,7 @@ if (!BlackJacke)
     else if (jatekosOsszeg > osztoOsszeg) Console.WriteLine("Ön nyert");
     else if (jatekosOsszeg < osztoOsszeg) Console.WriteLine("Ön vesztett");
     else Console.WriteLine("Döntetlen");
+}
 }
 int KartyaErtek(string lap)
     {
