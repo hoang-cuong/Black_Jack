@@ -12,6 +12,8 @@ Console.WriteLine();
 Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
 Console.WriteLine();
 
+Console.WriteLine("Nyomj meg egy gombot a játék indításához... \n");
+Console.ReadKey();
 
 string jatekosKartya1 = ertekek[random.Next(ertekek.Length)];
 string jatekosKartya2 = ertekek[random.Next(ertekek.Length)];
