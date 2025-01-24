@@ -10,8 +10,9 @@ string jatekosKartya2 = ertekek[random.Next(ertekek.Length)];
 string osztoKartya1 = ertekek[random.Next(ertekek.Length)];
 string osztoKartya2 = ertekek[random.Next(ertekek.Length)];
 
-
-
+int jatekosOsszeg = KartyaErtek(jatekosKartya1) + KartyaErtek(jatekosKartya2);
+int osztoElsoKartya = KartyaErtek(osztoKartya1);
+int osztoOsszeg = KartyaErtek(osztoKartya1) + KartyaErtek(osztoKartya2);
 
 
 int KartyaErtek(string lap)
