@@ -78,12 +78,16 @@ if (!BlackJacke)
         }
 
     }
-
-
-    int KartyaErtek(string lap)
-{
+    if (jatekosOsszeg > 21) Console.WriteLine("Túl lépted a 21-et, vesztettél");
+    else if (osztoOsszeg > 21) Console.WriteLine("Túl lépte az osztó a 21-et, ön nyert");
+    else if (jatekosOsszeg > osztoOsszeg) Console.WriteLine("Ön nyert");
+    else if (jatekosOsszeg < osztoOsszeg) Console.WriteLine("Ön vesztett");
+    else Console.WriteLine("Döntetlen");
+}
+int KartyaErtek(string lap)
+    {
     if (lap == "Ász") return 11;
     if (lap == "Király" || lap == "Bubi" || lap == "Dáma") return 10;
     if (int.TryParse(lap, out int szam)) return szam;
     return 0;
-}
+    }
