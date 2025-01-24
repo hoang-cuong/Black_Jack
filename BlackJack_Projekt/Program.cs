@@ -52,6 +52,21 @@ if (!BlackJacke)
 {
     Console.Write("(H)it or (S)tand? ");
     string hitOrStand = Console.ReadLine()!.ToUpper();
+    while (hitOrStand == "H")
+    {
+        string jatekosKartyaSok = (ertekek[random.Next(ertekek.Length)]);
+        jatekosOsszeg += KartyaErtek(jatekosKartyaSok);
+        Console.WriteLine("Új kártyád: " + jelek[random.Next(jelek.Length)] + " - " + jatekosKartyaSok + ", Új összeg: " + jatekosOsszeg);
+
+        if (jatekosOsszeg > 21)
+        {
+            break;
+        }
+        Console.Write("Szeretnél még lapot húzni? (H/S): ");
+
+        hitOrStand = Console.ReadLine()!.ToUpper();
+
+    }
 }
 
 
