@@ -4,6 +4,14 @@
 string[] jelek = { "Kör", "Káró", "Treff", "Pikk" };
 string[] ertekek = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Bubi", "Dáma", "Király", "Ász" };
 
+Console.WriteLine();
+Console.WriteLine("                                        " + "Üdvözlünk a Blackjack kártya játékban!");
+Console.WriteLine();
+Console.WriteLine("Próbáld meg legyőzni az osztót úgy, hogy minél közelebb kerülj a 21-hez, de ne lépd túl.");
+Console.WriteLine();
+Console.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+Console.WriteLine();
+
 
 string jatekosKartya1 = ertekek[random.Next(ertekek.Length)];
 string jatekosKartya2 = ertekek[random.Next(ertekek.Length)];
