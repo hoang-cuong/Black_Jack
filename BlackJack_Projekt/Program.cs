@@ -15,6 +15,10 @@ int osztoElsoKartya = KartyaErtek(osztoKartya1);
 int osztoOsszeg = KartyaErtek(osztoKartya1) + KartyaErtek(osztoKartya2);
 
 
+Console.WriteLine("Első kártyád: " + jelek[random.Next(jelek.Length)] + " - " + jatekosKartya1 + ", Második kártyád: " + jelek[random.Next(jelek.Length)] + " - " + jatekosKartya2 + ", Összesen ennyi az értékük: " + jatekosOsszeg);
+Console.WriteLine("Osztó első kártyája: " + jelek[random.Next(jelek.Length)] + " - " + osztoKartya1 + ", Összesen ennyi az értéke: " + osztoElsoKartya);
+
+
 int KartyaErtek(string lap)
 {
     if (lap == "Ász") return 11;
