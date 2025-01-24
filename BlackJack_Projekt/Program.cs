@@ -50,7 +50,8 @@ if (osztoOsszeg == 21)
 }
 if (!BlackJacke)
 {
-
+    Console.Write("(H)it or (S)tand? ");
+    string hitOrStand = Console.ReadLine()!.ToUpper();
 }
 
 
