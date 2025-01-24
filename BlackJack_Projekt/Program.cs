@@ -67,10 +67,20 @@ if (!BlackJacke)
         hitOrStand = Console.ReadLine()!.ToUpper();
 
     }
-}
+    if (hitOrStand == "S")
+    {
+        Console.WriteLine("Osztó második kártyája: " + jelek[random.Next(jelek.Length)] + " - " + osztoKartya2 + ", Új osszeg: " + osztoOsszeg);
+        while (osztoOsszeg <= 16)
+        {
+            string osztoKartyaSok = ertekek[random.Next(ertekek.Length)];
+            osztoOsszeg += KartyaErtek(osztoKartyaSok);
+            Console.WriteLine("Osztó új kártyája: " + jelek[random.Next(jelek.Length)] + " - " + osztoKartyaSok + ", Új osszeg: " + osztoOsszeg);
+        }
+
+    }
 
 
-int KartyaErtek(string lap)
+    int KartyaErtek(string lap)
 {
     if (lap == "Ász") return 11;
     if (lap == "Király" || lap == "Bubi" || lap == "Dáma") return 10;
