@@ -29,6 +29,21 @@ Console.WriteLine("Első kártyád: " + jelek[random.Next(jelek.Length)] + " - "
 Console.WriteLine("Osztó első kártyája: " + jelek[random.Next(jelek.Length)] + " - " + osztoKartya1 + ", Összesen ennyi az értéke: " + osztoElsoKartya);
 
 
+bool BlackJacke = false;
+
+if (jatekosOsszeg == 21)
+{
+    if (osztoOsszeg == 21)
+    {
+        Console.WriteLine("Döntetlen");
+    }
+    else
+    {
+        Console.WriteLine("Black Jack! Ön nyert");
+        BlackJacke = true;
+    }
+}
+
 int KartyaErtek(string lap)
 {
     if (lap == "Ász") return 11;
