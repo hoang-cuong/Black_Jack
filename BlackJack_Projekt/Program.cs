@@ -6,7 +6,7 @@ string[] ertekek = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Bubi", "Dám
 bool ujra = true;
 while (ujra)
 {
-
+    Console.Clear();
 
     Console.WriteLine();
 Console.WriteLine("                                        " + "Üdvözlünk a Blackjack kártya játékban!");
