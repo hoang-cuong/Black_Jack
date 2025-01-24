@@ -43,6 +43,11 @@ if (jatekosOsszeg == 21)
         BlackJacke = true;
     }
 }
+if (osztoOsszeg == 21)
+{
+    Console.WriteLine("Osztónak Black Jack! Ön veszített");
+    BlackJacke = true;
+}
 
 int KartyaErtek(string lap)
 {
