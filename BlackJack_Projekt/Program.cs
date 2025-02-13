@@ -54,9 +54,13 @@ if (osztoOsszeg == MAX)
 }
 if (!BlackJacke)
 {
-    Console.Write("(H)it or (S)tand? ");
-    string hitOrStand = Console.ReadLine()!.ToUpper();
-    while (hitOrStand == "H")
+        string hitOrStand;
+        do
+        {
+            Console.Write("(H)it or (S)tand? ");
+            hitOrStand = Console.ReadLine()!.ToUpper();;
+        } while (hitOrStand != "H" && hitOrStand != "S");
+        while (hitOrStand == "H")
     {
         string jatekosKartyaSok = (ertekek[random.Next(ertekek.Length)]);
         jatekosOsszeg += KartyaErtek(jatekosKartyaSok);
@@ -66,11 +70,13 @@ if (!BlackJacke)
         {
             break;
         }
-        Console.Write("Szeretnél még lapot húzni? (H/S): ");
+            do
+            {
+                Console.Write("Szeretnél még lapot húzni? (H/S) ");
+                hitOrStand = Console.ReadLine()!.ToUpper(); ;
+            } while (hitOrStand != "H" && hitOrStand != "S");
 
-        hitOrStand = Console.ReadLine()!.ToUpper();
-
-    }
+        }
     if (hitOrStand == "S")
     {
         Console.WriteLine("Osztó második kártyája: " + jelek[random.Next(jelek.Length)] + " - " + osztoKartya2 + ", Új osszeg: " + osztoOsszeg);
@@ -88,8 +94,13 @@ if (!BlackJacke)
     else if (jatekosOsszeg < osztoOsszeg) Console.WriteLine("Ön vesztett");
     else Console.WriteLine("Döntetlen");
  }
-    Console.WriteLine("Szeretnél egy visszavágot? (I)gen (N)em");
-    string igenNem = Console.ReadLine()!.ToUpper();
+    string igenNem;
+    do
+    {
+        Console.Write("Szeretnél egy visszavágot? (I)gen (N)em ");
+        igenNem = Console.ReadLine()!.ToUpper();
+    } while (igenNem != "I" && igenNem != "N");
+
     if (igenNem == "I")
     {
         ujra = true;
