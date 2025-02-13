@@ -1,5 +1,5 @@
 ﻿Random random = new Random();
-
+const int MAX = 21;
 
 string[] jelek = { "Kör", "Káró", "Treff", "Pikk" };
 string[] ertekek = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Bubi", "Dáma", "Király", "Ász" };
@@ -35,9 +35,9 @@ Console.WriteLine("Osztó első kártyája: " + jelek[random.Next(jelek.Length)]
 
 bool BlackJacke = false;
 
-if (jatekosOsszeg == 21)
+if (jatekosOsszeg == MAX)
 {
-    if (osztoOsszeg == 21)
+    if (osztoOsszeg == MAX)
     {
         Console.WriteLine("Döntetlen");
     }
@@ -47,7 +47,7 @@ if (jatekosOsszeg == 21)
         BlackJacke = true;
     }
 }
-if (osztoOsszeg == 21)
+if (osztoOsszeg == MAX)
 {
     Console.WriteLine("Osztónak Black Jack! Ön veszített");
     BlackJacke = true;
@@ -62,7 +62,7 @@ if (!BlackJacke)
         jatekosOsszeg += KartyaErtek(jatekosKartyaSok);
         Console.WriteLine("Új kártyád: " + jelek[random.Next(jelek.Length)] + " - " + jatekosKartyaSok + ", Új összeg: " + jatekosOsszeg);
 
-        if (jatekosOsszeg > 21)
+        if (jatekosOsszeg > MAX)
         {
             break;
         }
@@ -82,8 +82,8 @@ if (!BlackJacke)
         }
 
     }
-    if (jatekosOsszeg > 21) Console.WriteLine("Túl lépted a 21-et, vesztettél");
-    else if (osztoOsszeg > 21) Console.WriteLine("Túl lépte az osztó a 21-et, ön nyert");
+    if (jatekosOsszeg > MAX) Console.WriteLine("Túl lépted a 21-et, vesztettél");
+    else if (osztoOsszeg > MAX) Console.WriteLine("Túl lépte az osztó a 21-et, ön nyert");
     else if (jatekosOsszeg > osztoOsszeg) Console.WriteLine("Ön nyert");
     else if (jatekosOsszeg < osztoOsszeg) Console.WriteLine("Ön vesztett");
     else Console.WriteLine("Döntetlen");
